@@ -418,9 +418,9 @@
     </div>
   </div>
   <div class="hero-emoji-grid">
-    <div>🍕</div><div>🍜</div><div>🍣</div>
-    <div>🥗</div><div>🍔</div><div>🌮</div>
-    <div>🍰</div><div>🥘</div><div>🍱</div>
+    <div>🫓</div><div>🍚</div><div>🍩</div>
+    <div>🍛</div><div>🍲</div><div>🐟</div>
+    <div>☕</div><div>🍋</div><div>🍮</div>
   </div>
 </section>
 
@@ -434,12 +434,11 @@
   <!-- Category Filter -->
   <div class="categories">
     <button class="cat-btn active" onclick="filterCategory(this,'all')">🍽 All</button>
-    <button class="cat-btn" onclick="filterCategory(this,'pizza')">🍕 Pizza</button>
-    <button class="cat-btn" onclick="filterCategory(this,'burger')">🍔 Burgers</button>
-    <button class="cat-btn" onclick="filterCategory(this,'asian')">🍜 Asian</button>
-    <button class="cat-btn" onclick="filterCategory(this,'sushi')">🍣 Sushi</button>
-    <button class="cat-btn" onclick="filterCategory(this,'salad')">🥗 Healthy</button>
-    <button class="cat-btn" onclick="filterCategory(this,'dessert')">🍰 Desserts</button>
+    <button class="cat-btn" onclick="filterCategory(this,'dosa')">🫓 Dosa</button>
+    <button class="cat-btn" onclick="filterCategory(this,'tiffin')">🍚 Tiffin</button>
+    <button class="cat-btn" onclick="filterCategory(this,'meals')">🍛 Meals</button>
+    <button class="cat-btn" onclick="filterCategory(this,'drinks')">☕ Drinks</button>
+    <button class="cat-btn" onclick="filterCategory(this,'dessert')">🍮 Desserts</button>
   </div>
 
   <!-- Food Grid -->
@@ -470,18 +469,18 @@
 
 <script>
 const MENU = [
-  { id:1, name:"Margherita Royale", desc:"San Marzano tomato, buffalo mozzarella, fresh basil, sea salt", price:349, emoji:"🍕", cat:"pizza", rating:"4.7★", time:"25 min", badge:"BESTSELLER", veg:true },
-  { id:2, name:"Pepperoni Inferno", desc:"Double pepperoni, chilli flakes, honey drizzle, smoked gouda", price:449, emoji:"🍕", cat:"pizza", rating:"4.8★", time:"25 min", veg:false },
-  { id:3, name:"Truffle Burger", desc:"Wagyu patty, truffle aioli, caramelised onions, brioche bun", price:399, emoji:"🍔", cat:"burger", rating:"4.9★", time:"20 min", badge:"CHEF'S PICK", veg:false },
-  { id:4, name:"Crispy Veg Burger", desc:"Panko-crumbed cauliflower, sriracha mayo, pickled cucumber", price:299, emoji:"🍔", cat:"burger", rating:"4.5★", time:"18 min", veg:true },
-  { id:5, name:"Tonkotsu Ramen", desc:"18-hr pork broth, soft egg, chashu pork belly, nori, bamboo", price:379, emoji:"🍜", cat:"asian", rating:"4.8★", time:"30 min", badge:"POPULAR", veg:false },
-  { id:6, name:"Pad Thai Noodles", desc:"Rice noodles, tamarind, tofu, peanuts, lime, spring onion", price:319, emoji:"🍜", cat:"asian", rating:"4.6★", time:"22 min", veg:true },
-  { id:7, name:"Salmon Sashimi Box", desc:"Atlantic salmon, pickled ginger, wasabi, ponzu, edamame", price:529, emoji:"🍣", cat:"sushi", rating:"4.9★", time:"15 min", badge:"PREMIUM", veg:false },
-  { id:8, name:"Dragon Roll", desc:"Avocado, cucumber, tempura prawn, tobiko, unagi sauce", price:479, emoji:"🍣", cat:"sushi", rating:"4.7★", time:"18 min", veg:false },
-  { id:9, name:"Power Grain Bowl", desc:"Quinoa, roasted chickpeas, tahini, kale, pomegranate, feta", price:349, emoji:"🥗", cat:"salad", rating:"4.6★", time:"12 min", veg:true },
-  { id:10, name:"Burrata Salad", desc:"Creamy burrata, heritage tomatoes, basil oil, sourdough crisps", price:399, emoji:"🥗", cat:"salad", rating:"4.8★", time:"10 min", badge:"NEW", veg:true },
-  { id:11, name:"Tiramisu", desc:"Mascarpone cream, espresso-soaked ladyfingers, cocoa dust", price:229, emoji:"🍰", cat:"dessert", rating:"4.9★", time:"5 min", veg:true },
-  { id:12, name:"Mango Sticky Rice", desc:"Jasmine rice, coconut milk, fresh Alphonso mango, sesame", price:199, emoji:"🍮", cat:"dessert", rating:"4.7★", time:"8 min", badge:"SEASONAL", veg:true },
+  { id:1, name:"Masala Dosa", desc:"Crispy rice crepe stuffed with spiced potato filling, served with sambar & three chutneys", price:149, emoji:"🫓", cat:"dosa", rating:"4.9★", time:"15 min", badge:"BESTSELLER", veg:true },
+  { id:2, name:"Ghee Roast Dosa", desc:"Thin golden dosa roasted in generous ghee, with coconut chutney & sambar", price:129, emoji:"🫓", cat:"dosa", rating:"4.8★", time:"12 min", veg:true },
+  { id:3, name:"Rava Dosa", desc:"Crispy semolina dosa with onion, green chilli, coriander & peppercorn", price:139, emoji:"🫓", cat:"dosa", rating:"4.7★", time:"14 min", badge:"POPULAR", veg:true },
+  { id:4, name:"Idli Sambar", desc:"Steamed soft rice cakes with piping hot sambar, coconut & tomato chutney", price:99, emoji:"🍚", cat:"tiffin", rating:"4.8★", time:"10 min", badge:"CLASSIC", veg:true },
+  { id:5, name:"Medu Vada", desc:"Crispy urad dal fritters with a fluffy centre, sambar & coconut chutney", price:89, emoji:"🍩", cat:"tiffin", rating:"4.7★", time:"12 min", veg:true },
+  { id:6, name:"Pongal", desc:"Comforting rice & moong dal khichdi seasoned with ghee, cumin, pepper & cashews", price:119, emoji:"🍲", cat:"tiffin", rating:"4.6★", time:"15 min", veg:true },
+  { id:7, name:"Chettinad Chicken Curry", desc:"Aromatic dry-roasted spices, curry leaves, kalpasi & tender chicken pieces", price:299, emoji:"🍛", cat:"meals", rating:"4.9★", time:"30 min", badge:"CHEF'S PICK", veg:false },
+  { id:8, name:"Vegetable Sambar Rice", desc:"Tangy tamarind sambar with drumstick, brinjal, tomato over steamed rice", price:179, emoji:"🍛", cat:"meals", rating:"4.7★", time:"20 min", veg:true },
+  { id:9, name:"Fish Curry Rice", desc:"Kerala-style fish curry in coconut milk with kodampuli (gamboge), steamed red rice", price:279, emoji:"🐟", cat:"meals", rating:"4.8★", time:"25 min", badge:"POPULAR", veg:false },
+  { id:10, name:"Lemon Rice", desc:"Turmeric-tinted rice with mustard, peanuts, curry leaves & a bright lemon zing", price:149, emoji:"🍋", cat:"meals", rating:"4.5★", time:"15 min", veg:true },
+  { id:11, name:"Filter Coffee", desc:"Freshly brewed dark roast decoction with frothed milk, served in traditional tumbler-davara", price:59, emoji:"☕", cat:"drinks", rating:"4.9★", time:"5 min", badge:"MUST TRY", veg:true },
+  { id:12, name:"Payasam", desc:"Creamy vermicelli kheer with cardamom, saffron, cashews & raisins in condensed milk", price:129, emoji:"🍮", cat:"dessert", rating:"4.8★", time:"8 min", badge:"SEASONAL", veg:true },
 ];
 
 let cart = {};
@@ -514,11 +513,10 @@ function renderMenu(items) {
 
 function getBg(cat) {
   const map = {
-    pizza:'linear-gradient(135deg,#2a1a0a,#1e1208)',
-    burger:'linear-gradient(135deg,#1a1a0a,#121209)',
-    asian:'linear-gradient(135deg,#0a1a1a,#081212)',
-    sushi:'linear-gradient(135deg,#0a121a,#080c12)',
-    salad:'linear-gradient(135deg,#0a1a0a,#081208)',
+    dosa:'linear-gradient(135deg,#2a1a0a,#1e1208)',
+    tiffin:'linear-gradient(135deg,#1a1a0a,#121209)',
+    meals:'linear-gradient(135deg,#1a0e0a,#120a08)',
+    drinks:'linear-gradient(135deg,#0a0f1a,#080c12)',
     dessert:'linear-gradient(135deg,#1a0a1a,#120812)',
   };
   return map[cat] || '#221c16';
